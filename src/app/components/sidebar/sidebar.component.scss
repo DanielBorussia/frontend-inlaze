@@ -1,0 +1,22 @@
+.sidenav-header{
+    padding-top: 24px;
+    text-align: center;
+    img{
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .header-text{
+        color: #3c3c85;
+        h2{
+            margin: 0;
+            font-size: 19px;
+            line-height: 1.5rem;
+        }
+        p{
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+}
+

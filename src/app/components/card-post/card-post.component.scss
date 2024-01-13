@@ -1,0 +1,23 @@
+.post-card {
+    width: 95%;
+    margin-bottom: 10px;
+    .profile-post{
+      img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .options-post{
+      margin-left: auto;
+    }
+}
+
+
+mat-card-content{
+  p{
+    word-wrap: break-word;
+  }
+}

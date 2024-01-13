@@ -1,0 +1,42 @@
+.container-profile{
+    margin: auto;
+    display: block;
+    mat-card{
+        height: 90vh;
+        mat-card-header{
+            font-size: 25px;
+            margin-bottom:15px;
+           
+        }
+        .profileCard{
+            .profileCard--item{
+                text-transform: uppercase;
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                span{
+                  color: #3c3c85;
+                  font-weight: 500;
+                }
+            }
+        }
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .container-profile{
+      width: 100%;
+    }
+  }
+  
+  @media(min-width : 701px){
+    .container-profile{
+      width: 650px;
+      height: 100px;
+    }
+  }
+
+  mat-form-field{
+    width: 100%;
+    min-width: 300px;
+}

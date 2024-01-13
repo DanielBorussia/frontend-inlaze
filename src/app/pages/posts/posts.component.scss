@@ -1,0 +1,17 @@
+.container-posts{
+  margin: auto;
+  display: block;
+
+}
+
+@media (max-width: 700px) {
+  .container-posts{
+    width: 100%;
+  }
+}
+
+@media(min-width : 701px){
+  .container-posts{
+    width: 650px;
+  }
+}

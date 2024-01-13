@@ -1,0 +1,22 @@
+.formPost-card{
+    background-color: white;
+    width: 95%;
+    margin: 10px 0px;
+    display: block;
+    padding: 5px;
+    mat-card-title{
+        font-size: 25px;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+    }
+    .post-form {
+        .input-full-width {
+          width: 100%;
+        }
+    }
+  
+}
+
+mat-spinner{
+    margin: 10px auto !important;
+}

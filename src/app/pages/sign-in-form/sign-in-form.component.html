@@ -1,0 +1,13 @@
+<section>
+  <mat-tab-group
+    [selectedIndex]="tabSelected()"
+    (selectedIndexChange)="changeTab($event)"
+  >
+    <mat-tab label="Inicia Sesión">
+      <app-login />
+    </mat-tab>
+    <mat-tab label="Registrarse">
+      <app-form-create-user (tabSelected)="changeTab($event)" />
+    </mat-tab>
+  </mat-tab-group>
+</section>

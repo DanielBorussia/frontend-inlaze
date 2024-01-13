@@ -1,0 +1,8 @@
+<div class="container-posts">
+  <app-form-create-post />
+  @for (post of postsService.posts(); track post._id) {
+  <app-card-post [post]="post" />
+  }@empty {
+  <h2>Espere ...</h2>
+  }
+</div>

@@ -1,0 +1,21 @@
+<div class="sidenav-header">
+  <img width="100" height="100" src="assets/userLogo.png" alt="perfil" />
+  <div class="header-text">
+    <h2>{{ authService.getUserName() }}</h2>
+    <p>{{ authService.getUserEmail() }}</p>
+  </div>
+</div>
+<mat-list role="list">
+  <a (click)="toAccount()" mat-list-item>
+    <mat-icon matListItemIcon>folder</mat-icon>
+    <span matListItemTitle>Mis Datos</span>
+  </a>
+  <a (click)="toPosts()" mat-list-item>
+    <mat-icon matListItemIcon>language</mat-icon>
+    <span matListItemTitle>Publicaciones</span>
+  </a>
+  <a (click)="logOut()" mat-list-item>
+    <mat-icon matListItemIcon>home</mat-icon>
+    <span matListItemTitle>Cerrar Sesión</span>
+  </a>
+</mat-list>

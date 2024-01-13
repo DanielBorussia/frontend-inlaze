@@ -1,0 +1,29 @@
+<mat-card class="formPost-card">
+  <mat-card-header>
+    <mat-card-title>Actualizar Post</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="post-form">
+      <mat-form-field class="input-full-width">
+        <mat-label>Titulo</mat-label>
+        <input matInput [(ngModel)]="title" name="title" />
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <mat-label>Mensaje</mat-label>
+        <textarea
+          matInput
+          placeholder="En que piensas?"
+          [(ngModel)]="content"
+          name="content"
+        ></textarea>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button (click)="handleUpdatePost()" mat-raised-button color="primary">
+      GUARDAR CAMBIOS
+    </button>
+  </mat-card-actions>
+</mat-card>

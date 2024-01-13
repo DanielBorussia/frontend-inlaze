@@ -1,0 +1,63 @@
+<mat-card>
+  <mat-card-title> Registra tus datos </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="createUser()">
+      @if(form.get('fullName')?.invalid && form.get('fullName')?.touched){
+      <small>El nombre completo es requerido*</small>
+      }
+      <mat-form-field>
+        <input
+          type="text"
+          matInput
+          placeholder="Nombre Completo"
+          formControlName="fullName"
+        />
+      </mat-form-field>
+      @if(form.get('email')?.invalid && form.get('email')?.touched){
+      <small>El correo es requerido o es invalido*</small>
+      }
+      <mat-form-field>
+        <input
+          type="email"
+          matInput
+          placeholder="Email"
+          formControlName="email"
+        />
+      </mat-form-field>
+      @if(form.get('edad')?.invalid && form.get('edad')?.touched){
+      <small>La edad es requerida*</small>
+      }
+      <mat-form-field>
+        <input
+          type="number"
+          matInput
+          placeholder="Edad"
+          formControlName="edad"
+        />
+      </mat-form-field>
+      @if(form.get('password')?.invalid && form.get('password')?.touched){
+      <small>La clave es requerida*</small>
+      }
+      <mat-form-field>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
+
+      <div class="button">
+        <button
+          type="submit"
+          mat-button
+          mat-raised-button
+          color="primary"
+          [disabled]="!form.valid"
+        >
+          Registrarse
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

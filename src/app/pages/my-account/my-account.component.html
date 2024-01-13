@@ -1,0 +1,81 @@
+<div class="container-profile">
+  <mat-card>
+    <mat-card-header> MIS DATOS </mat-card-header>
+
+    <mat-card-content>
+      @if(!editingMode){
+      <div class="profileCard">
+        <div class="profileCard--item">
+          <span>Nombre Completo</span>
+          {{ this.user().fullName }}
+        </div>
+        <div class="profileCard--item">
+          <span>Email</span>
+          {{ this.user().email }}
+        </div>
+        <div class="profileCard--item">
+          <span>Edad</span>
+          {{ this.user().age }} años
+        </div>
+        <div class="profileCard--item">
+          <span>Fecha de creación</span>
+          {{ this.user().createdAt }}
+        </div>
+      </div>
+      }@else {
+      <form [formGroup]="form" (ngSubmit)="updateUser()">
+        @if(form.get('fullName')?.invalid && form.get('fullName')?.touched){
+        <small>El nombre completo es requerido*</small>
+        }
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Nombre Completo"
+            formControlName="fullName"
+          />
+        </mat-form-field>
+        @if(form.get('email')?.invalid && form.get('email')?.touched){
+        <small>El correo es requerido o es invalido*</small>
+        }
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+        </mat-form-field>
+        @if(form.get('edad')?.invalid && form.get('edad')?.touched){
+        <small>La edad es requerida*</small>
+        }
+        <mat-form-field>
+          <input
+            type="number"
+            matInput
+            placeholder="Edad"
+            formControlName="edad"
+          />
+        </mat-form-field>
+
+        <div class="button">
+          <button
+            type="submit"
+            mat-button
+            mat-raised-button
+            color="primary"
+            [disabled]="!form.valid"
+          >
+            Actualizar Datos
+          </button>
+        </div>
+      </form>
+      }
+    </mat-card-content>
+    <mat-card-actions>
+      @if(!editingMode){
+      <button mat-button (click)="changeEdition()">EDITAR</button>
+      }
+    </mat-card-actions>
+  </mat-card>
+</div>
